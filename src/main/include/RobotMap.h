@@ -33,7 +33,14 @@ struct RobotMap {
       gearbox,
       &sensor
     };
-  };
-  IntakeSystem intake;
-  
+  }; IntakeSystem intake;
+
+  struct ClimberSystem {
+    wom::MotorVoltageController controller{new WPI_TalonSRX(99)};
+    wom::Gearbox gearbox{
+     &controller,
+      nullptr,  
+      wom::DCMotor::CIM(1).WithReduction(1)
+    };
+  }; ClimberSystem climber;
 };

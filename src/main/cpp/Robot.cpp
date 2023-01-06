@@ -14,7 +14,7 @@ void Robot::RobotInit() {
 void Robot::RobotPeriodic() {
   /* Update the intake */
   intake->OnUpdate(20_ms);
-
+  
   BehaviourScheduler::GetInstance()->Tick();
 }
 

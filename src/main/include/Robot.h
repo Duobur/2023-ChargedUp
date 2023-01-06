@@ -3,7 +3,8 @@
 #include <string>
 #include "RobotMap.h"
 #include "Intake.h"
-
+#include "ClimberBehaviour.h"
+#include "Climber.h"
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SendableChooser.h>
 
@@ -25,4 +26,5 @@ class Robot : public frc::TimedRobot {
  private:
   RobotMap map;
   Intake *intake;
+  Climber *climber;
 };
